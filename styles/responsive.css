@@ -1,0 +1,48 @@
+@media (max-width: 768px) {
+  /* Меню стає вертикальним і по центру */
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  /* Контейнер займає всю ширину з невеликими відступами по боках */
+  .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  /* Заголовки стають трохи меншими */
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  /* Зменшуємо внутрішні відступи в картках */
+  .card {
+    padding: 15px;
+  }
+
+  /* Відео та аудіо вибудовуються в колонку */
+  .media-flex {
+    flex-direction: column;
+  }
+
+  .media-item {
+    min-width: 100%;
+  }
+
+  video, audio {
+    max-width: 100%;
+  }
+
+  /* Дозволяємо таблиці скролитися по горизонталі, якщо вона завелика */
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}

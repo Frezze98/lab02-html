@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Головна сторінка мого першого HTML-сайту.">
+    <title>Мій перший HTML-сайт</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+
+    <script src="app.js" defer></script>
+</head>
+<body>
+<header class="site-header">
+    <div class="container">
+        <nav>
+            <ul class="nav-list">
+                <li><a href="index.html" class="active">Головна</a></li>
+                <li><a href="pages/about.html">Про мене</a></li>
+                <li><a href="pages/contact.html">Контакти</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section class="section">
+        <h1>Мій перший HTML-сайт</h1>
+        <p>Вітаю! Це моя практична робота, де я демонструю <strong>базові навички</strong> створення вебсторінок.</p>
+    </section>
+
+    <section class="section">
+        <h2>Мої інтереси</h2>
+        <p>Я студент, вивчаю <em>програмування</em>, зокрема Kotlin та роботу з базами даних (SQL).</p>
+
+        <h2>Що я люблю робити у вільний час</h2>
+        <ul>
+            <li>Грати в Elite Dangerous: Odyssey та CS2</li>
+            <li>Дивитися аніме та донхуа (наприклад, "Бойовий континент")</li>
+            <li>Експериментувати з ШІ-генерацією зображень</li>
+        </ul>
+    </section>
+
+    <section class="section">
+        <h2>Етапи виконання цієї роботи</h2>
+        <ol>
+            <li>Написання HTML-каркасу</li>
+            <li>Додавання медіа та форм</li>
+            <li>Публікація на GitHub</li>
+        </ol>
+    </section>
+
+    <section class="section">
+        <h2>Мій аватар</h2>
+        <figure>
+            <img src="assets/img/avatar.jpg" alt="Аватар користувача Frezze" width="200" height="200">
+            <figcaption>Фото профілю</figcaption>
+        </figure>
+    </section>
+
+    <section class="section card">
+        <h2>Мій розклад</h2>
+        <table border="1">
+            <caption>Розклад занять</caption>
+            <thead>
+            <tr>
+                <th>День</th>
+                <th>Дисципліна</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Понеділок</td>
+                <td>Створення Web-сайтів (Front-end)</td>
+            </tr>
+            <tr>
+                <td>Середа</td>
+                <td>Бази даних</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <br>
+    <button id="magicBtn">Натисни мене</button>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>&copy; 2026 Vladyslav (Frezze)</p>
+    </div>
+</footer>
+</body>
+</html>

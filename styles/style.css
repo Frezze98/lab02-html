@@ -1,0 +1,270 @@
+:root {
+  --color-primary: #1d4e89;
+  --color-accent: #ffb703;
+  --color-bg: #f7f9fc;
+  --color-surface: #ffffff;
+  --color-text: #1f2937;
+  --color-border: #d9e2ec;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+.container {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+/* Шапка та футер */
+.site-header {
+  background-color: var(--color-surface);
+  padding: 15px 0;
+  border-bottom: 2px solid var(--color-border);
+}
+
+.site-footer {
+  background-color: var(--color-surface);
+  padding: 20px 0;
+  border-top: 2px solid var(--color-border);
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
+
+/* Навігація (Flexbox) */
+.nav-list {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+  color: var(--color-accent);
+}
+
+.nav-list a.active {
+  color: var(--color-primary);
+}
+
+/* Оформлення секцій та карток */
+.section {
+  margin-bottom: 30px;
+}
+
+.card {
+  background-color: var(--color-surface);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Типографіка та заголовки */
+h1, h2, h3 {
+  color: var(--color-primary);
+  margin-top: 0;
+}
+
+h1 {
+  font-size: 2.2rem;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+/* Списки */
+ul, ol {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* Зображення */
+figure {
+  margin: 0;
+  text-align: center;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+figcaption {
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+/* Таблиця */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background-color: var(--color-surface);
+}
+
+caption {
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+th, td {
+  padding: 12px 15px;
+  border: 1px solid var(--color-border);
+  text-align: left;
+}
+
+th {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f0f4f8; /* Чергування кольору рядків */
+}
+
+/* Кнопки */
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Сторінка "Про мене" - Flexbox для медіа */
+.media-flex {
+  display: flex;
+  gap: 30px;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap; /* Дозволяє переносити блоки, якщо не вистачає місця */
+}
+
+.media-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  min-width: 300px; /* Мінімальна ширина, щоб не стискалося надто сильно */
+}
+
+video {
+  width: 100%;
+  max-width: 480px; /* Обмеження ширини відео */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #000;
+}
+
+audio {
+  width: 100%;
+  max-width: 350px;
+  margin-top: 15px;
+}
+
+/* Оформлення форм */
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--color-text);
+}
+
+/* Стилі для текстових полів, селекту та текстареа */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: var(--color-surface);
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Стан фокусу */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(29, 78, 137, 0.15);
+}
+
+/* Оформлення fieldset та legend */
+fieldset {
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 15px;
+}
+
+legend {
+  font-weight: bold;
+  padding: 0 10px;
+  color: var(--color-primary);
+}
+
+/* Радіокнопки та чекбокси (скидання ширини 100%) */
+.radio-group label,
+.checkbox-group label {
+  display: inline-flex;
+  align-items: center;
+  font-weight: normal;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 8px;
+  cursor: pointer;
+}

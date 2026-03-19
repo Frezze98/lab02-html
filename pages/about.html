@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Про мене</title>
+
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container">
+    <nav>
+      <ul class="nav-list">
+        <li><a href="../index.html">Головна</a></li>
+        <li><a href="about.html" class="active">Про мене</a></li>
+        <li><a href="contact.html">Контакти</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="section">
+    <h1>Про мене</h1>
+    <p>Тут ви можете переглянути моє відео та послухати аудіо.</p>
+  </section>
+
+  <section class="section card">
+    <div class="media-flex">
+      <div class="media-item">
+        <h2>Моє відео</h2>
+        <video controls>
+          <source src="../assets/media/demo.mp4" type="video/mp4">
+          <source src="../assets/media/demo.webm" type="video/webm">
+          <p>Ваш браузер не підтримує HTML-відео. <a href="../assets/media/demo.mp4">Завантажити відео</a>.</p>
+        </video>
+      </div>
+
+      <div class="media-item">
+        <h2>Мій аудіотрек</h2>
+        <audio controls>
+          <source src="../assets/media/demo.mp3" type="audio/mpeg">
+          <source src="../assets/media/demo.ogg" type="audio/ogg">
+          <p>Ваш браузер не підтримує цей аудіофайл. <a href="../assets/media/demo.mp3">Завантажити аудіо</a>.</p>
+        </audio>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Vladyslav (Frezze)</p>
+  </div>
+</footer>
+</body>
+</html>

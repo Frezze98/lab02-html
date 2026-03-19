@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакти</title>
+
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="container">
+        <nav>
+            <ul class="nav-list">
+                <li><a href="../index.html">Головна</a></li>
+                <li><a href="about.html">Про мене</a></li>
+                <li><a href="contact.html" class="active">Контакти</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section class="section">
+        <h1>Контакти</h1>
+        <p>Зв’яжіться зі мною за допомогою форми нижче.</p>
+    </section>
+
+    <section class="section card">
+        <form action="#" method="get">
+            <h2>Надіслати повідомлення</h2>
+
+            <div class="form-group">
+                <label for="name">Ім’я (обов’язково):</label>
+                <input id="name" name="name" type="text" required minlength="2" maxlength="30">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email (обов’язково):</label>
+                <input id="email" name="email" type="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="tel">Телефон:</label>
+                <input id="tel" name="tel" type="tel">
+            </div>
+
+            <div class="form-group">
+                <label for="topic">Тема:</label>
+                <select id="topic" name="topic">
+                    <option value="study">Навчання</option>
+                    <option value="games">Ігри / Кооп</option>
+                    <option value="other">Інше</option>
+                </select>
+            </div>
+
+            <fieldset class="form-group">
+                <legend>Зручний спосіб зв’язку</legend>
+                <div class="radio-group">
+                    <label><input type="radio" name="contactWay" value="email" checked> Email</label>
+                    <label><input type="radio" name="contactWay" value="phone"> Телефон</label>
+                </div>
+            </fieldset>
+
+            <div class="form-group">
+                <label for="message">Повідомлення:</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label>
+                    <input type="checkbox" name="agree" required> Погоджуюсь з правилами
+                </label>
+            </div>
+
+            <button type="submit">Надіслати</button>
+        </form>
+    </section>
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        <p>&copy; 2026 Vladyslav (Frezze)</p>
+    </div>
+</footer>
+</body>
+</html>
