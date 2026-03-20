@@ -1,6 +1,7 @@
 # Практична робота: Інтерактивний веб-сайт (JavaScript)
 
 **Автор:** Юрчик Владислав Сергійович
+
 **Дисципліна:** Створення Web-сайтів (Front-end)
 
 ## 📌 Опис проекту
@@ -26,5 +27,7 @@
 
 ## 📸 Скріншоти роботи
 ![img.png](assets/img/Readme/img.png)
+
 ![img_1.png](assets/img/Readme/img_1.png)
+
 ![img_2.png](assets/img/Readme/img_2.png)
