@@ -42,13 +42,24 @@ body {
   margin-top: 40px;
 }
 
+nav {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
 /* Навігація (Flexbox) */
 .nav-list {
   display: flex;
+  align-items: center;
   gap: 25px;
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.nav-list li {
+  margin-bottom: 0;
 }
 
 .nav-list a {
@@ -149,7 +160,7 @@ th {
 }
 
 tbody tr:nth-child(even) {
-  background-color: #f0f4f8; /* Чергування кольору рядків */
+  background-color: #f0f4f8;
 }
 
 /* Кнопки */
@@ -175,7 +186,7 @@ button:hover {
   gap: 30px;
   justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap; /* Дозволяє переносити блоки, якщо не вистачає місця */
+  flex-wrap: wrap;
 }
 
 .media-item {
@@ -183,12 +194,12 @@ button:hover {
   flex-direction: column;
   align-items: center;
   flex: 1;
-  min-width: 300px; /* Мінімальна ширина, щоб не стискалося надто сильно */
+  min-width: 300px;
 }
 
 video {
   width: 100%;
-  max-width: 480px; /* Обмеження ширини відео */
+  max-width: 480px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: #000;
@@ -252,7 +263,7 @@ legend {
   color: var(--color-primary);
 }
 
-/* Радіокнопки та чекбокси (скидання ширини 100%) */
+/* Радіокнопки та чекбокси */
 .radio-group label,
 .checkbox-group label {
   display: inline-flex;
@@ -267,4 +278,258 @@ input[type="checkbox"] {
   width: auto;
   margin-right: 8px;
   cursor: pointer;
+}
+
+:root {
+  --color-primary: #1d4e89;
+  --color-accent: #ffb703;
+  --color-bg: #f7f9fc;
+  --color-surface: #ffffff;
+  --color-text: #1f2937;
+  --color-border: #d9e2ec;
+  --transition: all 0.3s ease;
+}
+
+/* Темна тема */
+.theme-dark {
+  --color-bg: #121826;
+  --color-surface: #1f2937;
+  --color-text: #f3f4f6;
+  --color-border: #374151;
+  --color-primary: #60a5fa;
+}
+
+.theme-dark input,
+.theme-dark textarea,
+.theme-dark select,
+.theme-dark table,
+.theme-dark td,
+.theme-dark th {
+  color: #f3f4f6;
+  background-color: #1f2937;
+}
+
+.theme-dark tbody tr:nth-child(even) {
+  background-color: #2d3748;
+}
+
+.theme-dark ::placeholder {
+  color: #9ca3af;
+}
+
+/* Додаємо плавність перемикання для всього сайту */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card, .site-header, .site-footer, .container {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* --- АКОРДЕОН --- */
+
+.accordion {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.accordion-item {
+  background-color: var(--color-surface);
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid transparent;
+}
+
+/* Ефект при наведенні на всю картку */
+.accordion-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* --- СТИЛІ КНОПКИ (ЗАГОЛОВКА) --- */
+.accordion-header {
+  width: 100%;
+  padding: 12px 20px;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+
+  color: var(--color-text);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* Акцентний колір при наведенні на кнопку */
+.accordion-header:hover {
+  color: var(--color-primary);
+}
+
+/* Стилізація іконки стрілочки (через псевдоелемент) */
+.accordion-header::after {
+  content: '→';
+  font-size: 1.1rem;
+  color: var(--color-primary);
+  background-color: rgba(29, 78, 137, 0.05);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease, background-color 0.3s ease;
+}
+
+/* Коли пункт активний, змінюємо іконку стрілки */
+.accordion-item.active .accordion-header::after {
+  transform: rotate(90deg);
+  background-color: var(--color-primary);
+  color: white;
+}
+
+/* Коли пункт активний, виділяємо заголовок */
+.accordion-item.active .accordion-header {
+  background-color: rgba(29, 78, 137, 0.03);
+  color: var(--color-primary);
+}
+
+
+/* --- СТИЛІ КОНТЕНТУ (ЩО ВСЕРЕДИНІ) --- */
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-in-out;
+
+  /* Колір тексту всередині */
+  color: var(--color-text);
+  background-color: rgba(0, 0, 0, 0.01);
+}
+
+/* Коли пункт активний, розкриваємо контент */
+.accordion-item.active .accordion-content {
+  max-height: 100px;
+  border-top: 1px solid var(--color-border);
+}
+
+/* Стилі для параграфа всередині контенту */
+.accordion-content p {
+  padding: 15px 20px;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* --- АДАПТАЦІЯ ДЛЯ ТЕМНОЇ ТЕМИ --- */
+.theme-dark .accordion-item {
+  border-color: var(--color-border);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.theme-dark .accordion-content {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.theme-dark .accordion-header::after {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* --- Кнопка Вгору --- */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  z-index: 3000;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+}
+
+/* --- Модальне вікно --- */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-content {
+  background: var(--color-surface);
+  padding: 10px;
+  border-radius: 10px;
+  position: relative;
+  max-width: 90%;
+}
+
+.close-modal {
+  position: absolute; top: -15px; right: -15px;
+  background: var(--color-accent); width: 35px; height: 35px;
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; color: black; font-weight: bold; font-size: 20px;
+}
+
+.modal-img {
+  max-width: 100%;
+  max-height: 80vh;
+  border-radius: 5px;
+  display: block;
+}
+
+/* --- Красива кругла кнопка теми --- */
+.theme-btn {
+  background: transparent;
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: 1.1rem;
+  cursor: pointer;
+
+  /* Робимо її круглою */
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  padding: 0;
+
+  /* Центруємо іконку всередині */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* Анімація */
+  transition: all 0.3s ease;
+  outline: none;
+  margin: 0;
+}
+
+.theme-btn:hover {
+  background-color: var(--color-border);
+  transform: rotate(30deg);
+}
+
+/* На маленьких екранах робимо трохи компактнішою */
+@media (max-width: 768px) {
+  .theme-btn {
+    margin-left: 10px;
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
 }

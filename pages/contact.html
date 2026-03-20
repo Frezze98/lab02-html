@@ -7,6 +7,8 @@
 
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/responsive.css">
+
+    <script src="../js/main.js" defer></script>
 </head>
 <body>
 <header class="site-header">
@@ -15,8 +17,9 @@
             <ul class="nav-list">
                 <li><a href="../index.html">Головна</a></li>
                 <li><a href="about.html">Про мене</a></li>
-                <li><a href="contact.html" class="active">Контакти</a></li>
+                <li><a href="contact.html">Контакти</a></li>
             </ul>
+            <button id="themeToggleBtn" class="theme-btn">🌓</button>
         </nav>
     </div>
 </header>
@@ -65,7 +68,9 @@
 
             <div class="form-group">
                 <label for="message">Повідомлення:</label>
-                <textarea id="message" name="message" rows="5"></textarea>
+                <textarea id="message" name="message" rows="5" maxlength="500"></textarea>
+                <div id="charCounter">Символів: 0 / 500</div>
+
             </div>
 
             <div class="form-group checkbox-group">

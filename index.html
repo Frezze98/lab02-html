@@ -9,20 +9,21 @@
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="./styles/responsive.css">
 
-    <script src="app.js" defer></script>
+    <script src="./js/main.js" defer></script>
 </head>
 <body>
 <header class="site-header">
     <div class="container">
         <nav>
-            <ul class="nav-list">
-                <li><a href="index.html" class="active">Головна</a></li>
-                <li><a href="pages/about.html">Про мене</a></li>
-                <li><a href="pages/contact.html">Контакти</a></li>
-            </ul>
+            <ul class="nav-list" id="navList"> <li><a href="index.html">Головна</a></li>
+            <li><a href="pages/about.html">Про мене</a></li>
+            <li><a href="pages/contact.html">Контакти</a></li>
+        </ul>
+            <button id="themeToggleBtn" class="theme-btn">🌓</button>
         </nav>
     </div>
 </header>
+
 
 <main class="container">
     <section class="section">
@@ -82,8 +83,23 @@
         </table>
     </section>
 
+    <section class="section card">
+        <h2>Мої навички (FAQ)</h2>
+        <div class="accordion">
+            <div class="accordion-item">
+                <button class="accordion-header">HTML & CSS</button>
+                <div class="accordion-content"><p>Вмію створювати семантичну розмітку та адаптивні стилі.</p></div>
+            </div>
+            <div class="accordion-item">
+                <button class="accordion-header">Kotlin & Java</button>
+                <div class="accordion-content"><p>Вивчаю об'єктно-орієнтоване програмування та розробку під Android.</p></div>
+            </div>
+        </div>
+    </section>
+
     <br>
     <button id="magicBtn">Натисни мене</button>
+
 </main>
 
 <footer class="site-footer">
@@ -91,5 +107,15 @@
         <p>&copy; 2026 Vladyslav (Frezze)</p>
     </div>
 </footer>
+
+<button id="backToTop" class="back-to-top" hidden>↑</button>
+
+<div id="avatarModal" class="modal" hidden>
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <img src="assets/img/avatar.jpg" alt="Аватар великий" class="modal-img">
+    </div>
+</div>
+
 </body>
 </html>
