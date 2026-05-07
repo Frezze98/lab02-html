@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "title": "Cooler Master MasterFan MF120",
+    "category": "cooling",
+    "description": "ARGB вентилятор для корпусу, 120мм, ефективне охолодження.",
+    "price": 650,
+    "image": "assets/img/avatar.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Corsair K68 RGB",
+    "category": "peripherals",
+    "description": "Механічна ігрова клавіатура з вологозахистом.",
+    "price": 4200,
+    "image": "assets/img/avatar.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Ducky One 2 Full Size",
+    "category": "peripherals",
+    "description": "Класична механічна клавіатура для довготривалої роботи.",
+    "price": 3800,
+    "image": "assets/img/avatar.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Блок живлення 850W 80+ Platinum ",
+    "category": "components",
+    "description": "Модульний блок живлення з високим ККД.",
+    "price": 5100,
+    "image": "assets/img/avatar.jpg"
+  },
+  {
+    "id": 5,
+    "title": "LG 34UM68-P Ultrawide",
+    "category": "monitors",
+    "description": "Широкоформатний монітор 34 дюйми для роботи та ігор.",
+    "price": 12500,
+    "image": "assets/img/avatar.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Миша Logitech G Pro X Superlight",
+    "category": "peripherals",
+    "description": "Бездротова ігрова миша, ідеальна для кіберспорту.",
+    "price": 5500,
+    "image": "assets/img/avatar.jpg"
+  },
+  {
+    "id": 7,
+    "title": "SSD Samsung 980 Pro 1TB",
+    "category": "components",
+    "description": "Надшвидкий накопичувач формату M.2 PCIe 4.0.",
+    "price": 3600,
+    "image": "assets/img/avatar.jpg"
+  },
+  {
+    "id": 8,
+    "title": "Водяне охолодження NZXT Kraken",
+    "category": "cooling",
+    "description": "Система рідинного охолодження з дисплеєм на помпі.",
+    "price": 8900,
+    "image": "assets/img/avatar.jpg"
+  }
+]

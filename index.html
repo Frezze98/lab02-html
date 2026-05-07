@@ -97,6 +97,38 @@
         </div>
     </section>
 
+    <section class="section">
+        <h2>Каталог комплектуючих</h2>
+
+        <div class="controls" style="margin-bottom: 20px; display: flex; gap: 10px; flex-wrap: wrap;">
+            <input type="text" id="searchInput" placeholder="Пошук..." style="padding: 8px; flex-grow: 1;">
+            <select id="categoryFilter" style="padding: 8px;">
+                <option value="all">Усі категорії</option>
+                <option value="cooling">Охолодження</option>
+                <option value="peripherals">Периферія</option>
+                <option value="monitors">Монітори</option>
+                <option value="components">Комплектуючі</option>
+            </select>
+            <select id="sortSelect" style="padding: 8px;">
+                <option value="default">За замовчуванням</option>
+                <option value="price-asc">Дешевші спочатку</option>
+            </select>
+        </div>
+
+        <div id="loadingState" style="display: none; font-weight: bold; margin-bottom: 15px;">Завантаження даних...</div>
+        <div id="errorState" style="display: none; color: red; margin-bottom: 15px;"></div>
+        <div id="emptyState" style="display: none; margin-bottom: 15px;">За вашим запитом нічого не знайдено.</div>
+
+        <div data-catalog id="catalogContainer" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px;">
+        </div>
+        <div data-catalog id="catalogContainer" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px;">
+        </div>
+
+        <div style="text-align: center; margin-top: 20px;">
+            <button id="showMoreBtn" style="display: none; padding: 10px 20px; cursor: pointer; font-size: 16px;">Показати ще ⬇️</button>
+        </div>
+    </section>
+
     <br>
     <button id="magicBtn">Натисни мене</button>
 
@@ -114,6 +146,14 @@
     <div class="modal-content">
         <span class="close-modal">&times;</span>
         <img src="assets/img/avatar.jpg" alt="Аватар великий" class="modal-img">
+    </div>
+</div>
+
+<div id="itemModal" class="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 1000; align-items: center; justify-content: center;">
+    <div class="modal-content" style="background: #fff; max-width: 500px; width: 90%; padding: 20px; border-radius: 8px; position: relative; max-height: 90vh; overflow-y: auto; color: #333;">
+        <span id="closeItemModal" class="close-modal" style="position: absolute; top: 10px; right: 15px; font-size: 28px; cursor: pointer; color: #555;">&times;</span>
+        <div id="itemModalBody" style="margin-top: 15px;">
+        </div>
     </div>
 </div>
 
