@@ -1,0 +1,21 @@
+{
+  "items": [
+    {
+      "id": "2",
+      "title": "Corsair K68 RGB",
+      "category": "peripherals",
+      "description": "Механічна ігрова клавіатура.",
+      "price": 4200,
+      "image": "assets/img/avatar.jpg"
+    },
+    {
+      "title": "Блок живлення",
+      "category": "components",
+      "price": 6401,
+      "description": "Супер пупер бж",
+      "image": "assets/img/avatar.jpg",
+      "id": "j6pI_hbs3SM"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
